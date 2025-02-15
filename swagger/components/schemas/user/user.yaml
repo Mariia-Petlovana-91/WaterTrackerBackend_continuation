@@ -1,0 +1,24 @@
+type: object
+properties:
+  name:
+    description: "User's name"
+    default: 'test@test.com'
+    type: string
+    example: 'John Doe'
+  email:
+    description: 'Users email'
+    type: string
+    example: 'example@example.com'
+  dailyGoal:
+    description: "User's dailyGoal"
+    type: number
+    example: '220'
+  gender:
+    description: "User's gender"
+    type: string
+    enum: ['woman', 'man']
+  avatarURL:
+    description: "Link to users's avatar"
+    type: string
+    format: binary
+    example: https://res.cloudinary.com/photo/image.png

@@ -1,0 +1,36 @@
+tags:
+  - Water
+summary: Add an entry about water
+operationId: addWater
+description: 'Add an entry about water intake with payload.'
+security:
+  - bearerAuth: []
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: '../../components/schemas/water/requestEntry.yaml'
+responses:
+  '201':
+    description: Successfully created an entry of water
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - message
+            - data
+          properties:
+            data:
+              type: object
+              $ref: '../../components/schemas/water/responseEntry.yaml'
+            message:
+              type: string
+              example: 'Water entry added successfully'
+  '400':
+    $ref: '../../components/responses/400.yaml'
+  '401':
+    $ref: '../../components/responses/401.yaml'
+  '500':
+    $ref: '../../components/responses/500.yaml'

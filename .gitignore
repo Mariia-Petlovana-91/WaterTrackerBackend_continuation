@@ -1,0 +1,11 @@
+/node_modules
+
+.env
+
+.vscode
+.DS_Store
+.idea
+
+
+# files for saving request pools
+pullrequests-list.txt

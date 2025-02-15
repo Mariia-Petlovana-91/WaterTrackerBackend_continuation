@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Water Tracker application
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  description: Documentation of the application "Water Tracker"
+tags:
+  - name: Authentication
+    description: Operations about -Auth
+  - name: Users
+    description: Operations about -User
+  - name: Water
+    description: Operations about -Water
+servers:
+  - url: https://watertrackerbackend-5ymk.onrender.com
+paths:
+  /auth/signup:
+    post:
+      $ref: '../swagger/paths/auth/signUpPost.yaml'
+  /auth/signin:
+    post:
+      $ref: '../swagger/paths/auth/signInPost.yaml'
+  /auth/logout:
+    post:
+      $ref: '../swagger/paths/auth/logoutPost.yaml'
+  /auth/refresh:
+    post:
+      $ref: '../swagger/paths/auth/refreshPost.yaml'
+  /user:
+    get:
+      $ref: '../swagger/paths/user/userGet.yaml'
+    patch:
+      $ref: '../swagger/paths/user/userUpdatePatch.yaml'
+  /user/avatar:
+    patch:
+      $ref: '../swagger/paths/user/userAvatarUpdate.yaml'
+  /water/entry:
+    post:
+      $ref: '../swagger/paths/water/waterPost.yaml'
+  /water/entry/{id}:
+    patch:
+      $ref: '../swagger/paths/water/{id}/waterByIdPatch.yaml'
+    delete:
+      $ref: '../swagger/paths/water/{id}/waterByIdDelete.yaml'
+  /water/today:
+    get:
+      $ref: '../swagger/paths/water/today.yaml'
+  /water/month/{date}:
+    get:
+      $ref: '../swagger/paths/water/monthlyStatistics.yaml'
+  /water/daily-norma:
+    patch:
+      $ref: '../swagger/paths/water/updateDaily.yaml'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
