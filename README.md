@@ -41,7 +41,7 @@ cd water-tracker-api
 npm install
 
 3️⃣ Set Up Environment Variables
-Create a .env file in the root folder and add: 
+Create a .env file in the root folder and add:
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
@@ -102,12 +102,12 @@ This project uses the following dependencies:
 
 ## Swagger docs
 
-https://watertrackerbackend-5ymk.onrender.com/api-docs/
+https://watertrackerbackend-continuation.onrender.com/api-docs/
 
 ## Deployment
 
 This project is deployed on **Render**. You can access the live API at:
 
-https://watertrackerbackend-5ymk.onrender.com
+https://watertrackerbackend-continuation.onrender.com
 
 Make sure to update the URL with your actual Render deployment link.
