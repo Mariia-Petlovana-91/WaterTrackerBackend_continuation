@@ -16,7 +16,7 @@ import { swaggerDocs } from './middlewares/swaggerDocs.js';
 export const setupServer = () => {
   const app = express();
 
-   const allowedOrigins = ['https://https://water-tracker-frontend-continuation.vercel.app', 'https://localhost:3000'];
+   const allowedOrigins = ['https://water-tracker-frontend-continuation.vercel.app', 'https://localhost:3000'];
 
    app.use(
      cors({
