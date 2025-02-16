@@ -14,22 +14,31 @@ import { errorHandler } from './middlewares/errorHandler.js';
 import { swaggerDocs } from './middlewares/swaggerDocs.js';
 
 export const setupServer = () => {
-  const app = express();
+  // const app = express();
 
-   const allowedOrigins = ['https://water-tracker-frontend-continuation.vercel.app', 'http://localhost:5173'];
+  //  const allowedOrigins = ['https://water-tracker-frontend-continuation.vercel.app'];
 
-   app.use(
-     cors({
-       origin: function (origin, callback) {
-         if (!origin || allowedOrigins.includes(origin)) {
-           callback(null, true);
-         } else {
-           callback(new Error('Not allowed by CORS'));
-         }
-       },
-       credentials: true,
-     }),
-   );
+  //  app.use(
+  //    cors({
+  //      origin: function (origin, callback) {
+  //        if (!origin || allowedOrigins.includes(origin)) {
+  //          callback(null, true);
+  //        } else {
+  //          callback(new Error('Not allowed by CORS'));
+  //        }
+  //      },
+  //      credentials: true,
+  //    }),
+  //  );
+
+  app.use(
+    cors({
+      origin: (origin, callback) => {
+        callback(null, true); 
+      },
+      credentials: true,
+    })
+  );
 
   app.use(express.json());
   app.use(express.static('uploads'));
