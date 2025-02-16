@@ -14,7 +14,7 @@ tags:
   - name: Water
     description: Operations about -Water
 servers:
-  - url: https://watertrackerbackend-5ymk.onrender.com
+  - url: https://watertrackerbackend-continuation.onrender.com
 paths:
   /auth/signup:
     post:
