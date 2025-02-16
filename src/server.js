@@ -40,7 +40,7 @@ export const setupServer = () => {
   app.use('/water', waterRouter);
   app.use('/user', userRouter);
   app.use('/auth', authRouter);
-  app.use('/c', swaggerDocs());
+  app.use('/api-docs', swaggerDocs());
 
   app.use(notFoundHandler);
 
