@@ -10,7 +10,7 @@ cloudinary.config({ cloud_name, api_key, api_secret });
 
 export const saveFileToCloudinary = async (file) => {
   const respons = await cloudinary.uploader.upload(file.path, {
-    folder: 'WaterTraсker',
+    folder: 'myBackendPhoto',
   });
   await unlink(file.path);
   return respons.secure_url;
